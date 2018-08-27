@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="css/base.css" />
+<script src="https://open.home.komect.com/jssdk/hejia-1.1.0.min.js"></script>
+<title>净水器</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			background: url(img/bg.png) 0 0 no-repeat;
+			background-size: 100% 23rem;
+		}
+		section{
+			width: 100%;
+			
+		}
+		section .top{
+			background: url(img/1.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 10rem;
+			width: 10rem;
+			margin: 2rem auto;
+		}
+		section .zhishui1{
+			background: url(img/4.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 10rem;
+			width: 10rem;
+			margin: 2rem auto;
+		}
+		section .jianxiu{
+			background: url(img/6.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 10rem;
+			width: 10rem;
+			margin: 2rem auto;
+		}
+		section .chongxi{
+			background: url(img/chongxi.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 10rem;
+			width: 10rem;
+			margin: 2rem auto;
+		}
+		section .zhishuiweiman{
+			background: url(img/zhishuiweiman.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 10rem;
+			width: 10rem;
+			margin: 2rem auto;
+		}
+		section .loushui{
+			background: url(img/loushui.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 10rem;
+			width: 10rem;
+			margin: 2rem auto;
+		}
+		section .all{
+			background: url(img/all.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 10rem;
+			width: 10rem;
+			margin: 2rem auto;
+		}
+		section .middle{
+			width: 100%
+		}
+		section .middle p{
+			float: left;
+			margin-left: 1.5rem;
+			color: white;
+		}
+		section .middle p span{
+			font-size: 2rem;
+		}
+		section .picture{
+			background: url(img/2.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 2.5rem;
+			width: 8rem;
+			margin-top: 6rem;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 3.5rem;
+		}
+		section .cur{
+			background: url(img/3.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			height: 2.5rem;
+			width: 8rem;
+			margin-top: 6rem;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 3.5rem;
+		}
+		section:nth-child(2) div p{
+			margin-left: 2rem;
+		}
+		section:nth-child(2) .specil{
+			height: 3.5rem;
+		}
+		section:nth-child(2) div .xuhao{
+			width: 2rem;
+			height: 2rem;
+			line-height: 2rem;
+			border-radius: 50%;
+			background: #30c0b1;
+			text-align: center;
+			color: white;
+			margin-left: 2rem;
+			float: left;
+		}
+		section:nth-child(2) div .zhishui{
+			width: 14rem;
+			margin-left: 3rem;
+		}
+		section:nth-child(2) div .zhishui p{
+			width: 14rem;
+			margin-top: 1rem;
+		}
+		section:nth-child(2) div .danwei{
+			width: 14rem;
+			margin-left: 3rem;
+		}
+		section:nth-child(2) div .danwei p{
+			width: 14rem;
+			color: gray;
+		}
+		section:nth-child(2) div .shuzhi{
+			width: 4rem;
+			float: right;
+		    font-size: 1.5rem;
+			margin-top: -2.5rem;
+			color: gray;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+	      <div class="top"></div>
+		  <div class="middle">
+		       <p>原水&nbsp;<span id="yuanshui">012</span>&nbsp;TDS</p>
+			   <p>净水&nbsp;<span id="jinshui">012</span>&nbsp;TDS</p>
+		 </div>
+		 <div onClick="chongxi('1')" class="picture"></div>
+	</section>
+	<section>
+	      <div>
+		     <p style="margin-bottom: 1rem;">滤芯状态</p>
+		  </div>
+		  <hr style="color: lightgray;"  width="99.5%" />
+		  <div class="specil">
+		      <div class="xuhao">
+			       1
+			  </div>
+			  <div class="zhishui">
+			       <p>累积制水量</p>
+			  </div>
+			  <div class="danwei">
+			       <p>升/L</p>
+			  </div>
+			  <div class="shuzhi">
+			       <span id="rongji">10/L</span>
+			  </div>
+		  </div>
+		  <hr style="color: lightgray;"  width="99.5%" />
+		<div class="specil">
+		      <div class="xuhao">
+			       2
+			  </div>
+			  <div class="zhishui">
+			       <p>累积制水量</p>
+			  </div>
+			  <div class="danwei">
+			       <p>升/L</p>
+			  </div>
+			  <div class="shuzhi">
+			       <span id="first">10/L</span>
+			  </div>
+		  </div>
+		  <hr style="color: lightgray;"  width="99.5%" />
+		<div class="specil">
+		      <div class="xuhao">
+			       3
+			  </div>
+			  <div class="zhishui">
+			       <p>累积制水量</p>
+			  </div>
+			  <div class="danwei">
+			       <p>升/L</p>
+			  </div>
+			  <div class="shuzhi">
+			       <span id="second">10/L</span>
+			  </div>
+		  </div>
+		  <hr style="color: lightgray;"  width="99.5%" />
+		<div class="specil">
+		      <div class="xuhao">
+			       4
+			  </div>
+			  <div class="zhishui">
+			       <p>累积制水量</p>
+			  </div>
+			  <div class="danwei">
+			       <p>升/L</p>
+			  </div>
+			  <div class="shuzhi">
+			       <span id="third">10/L</span>
+			  </div>
+		  </div>
+		  <hr style="color: lightgray;"  width="99.5%" />
+		<div class="specil">
+		      <div class="xuhao">
+			       5
+			  </div>
+			  <div class="zhishui">
+			       <p>累积制水量</p>
+			  </div>
+			  <div class="danwei">
+			       <p>升/L</p>
+			  </div>
+			  <div class="shuzhi">
+			       <span id="fourth">10/L</span>
+			  </div>
+		  </div>
+	</section>
+</body>
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	
+	
+	//part1
+    $(function(){
+		 var fontsize = 16 * $(window).width() / 320;
+        if (fontsize > 67.5) {
+            fontsize = 67.5;
+        }
+        $('html').css('font-size', fontsize);
+		$('.picture').click(function () {
+                $('.picture').removeClass("cur");
+                $(this).addClass("cur");
+			    $(".top").addClass("chongxi");
+                setTimeout(function () {
+                    $('.picture').removeClass("cur");
+                }, 200);
+			setTimeout(function(){
+				$('.top').removeClass("chongxi");
+			},15000);
+            });
+	});
+	
+	
+	
+	
+	//part2
+	function controlHeJia(op) {
+        Hejia.setControlParam({
+            parameters: {
+                param: [{
+                    name: "dataMode",
+                    content: op
+                }]
+            }
+        }, function () {
+        }, function (msg, obj) {
+        });
+    };
+	function chongxi(op){
+		controlHeJia(op);
+		//显示修改
+		$(".picture").click(function(){
+			$(".top").addClass("chongxi");
+		});
+	}
+	function hejInit() {
+        //合家亲
+        Hejia.ready(function () {
+            setInterval('getInfo()', 4000);
+            getInfo();
+        });
+    }
+		 function getInfo() {
+        Hejia.getCurrentParam(function (suc) {
+            if (typeof(suc) === "string") {
+                suc = JSON.parse(suc);
+            }
+          alert(JSON.stringify(suc));
+            //设备parameters为空
+            if (!suc.parameters || suc.parameters.size === 0) {
+                return;
+            }
+           	var stateFlag = false;
+            //遍历stream数组刷新页面各个参数值
+            $.each(suc["parameters"], function (i, val) {
+            		
+                if(val["name"] === "rawTDS") {
+                		$("#yuanshui").text(parseInt(val["value"]));
+                }
+                if(val["name"]==="waterTDS"){
+                	    $("#jinshui").text(parseInt(val["value"]));
+                }
+                if(val["name"] === "filterLifeTime" && val["index"]== "1") {
+                		$("#first").text(parseInt(val["value"]));
+                }
+                if(val["name"] === "filterLifeTime" && val["index"]== "2") {
+                		$("#second").text(parseInt(val["value"]));
+                }
+                if(val["name"] === "filterLifeTime" && val["index"]== "3") {
+                		$("#third").text(parseInt(val["value"]));
+                }
+                if(val["name"] === "filterLifeTime" && val["index"]== "4") {
+                		$("#fourth").text(parseInt(val["value"]));
+                }
+                if(val["name"] === "capacity") {
+                		$("#rongji").text(parseInt(val["value"]));
+                }
+                if(val["name"] === "rsd.faultState") {
+                		if(val["value"] === 0){
+                			
+                		}else if(val["value"] === 1){
+                			$(function(){
+								$(".top").addClass("zhishuiweiman").removeClass("loushui,all");
+							});
+                			stateFlag = true;
+                		}else if(val["value"] === 2){
+                			$(function(){
+								$(".top").addClass("loushui").removeClass("zhishuiweiman,all");
+							});
+                			stateFlag = true;
+                		}else if(val["value"] === 3){
+                			$(function(){
+								$(".top").addClass("all").removeClass("zhishuiweiman,loushui");
+							});
+                			stateFlag = true;
+                		}
+                }
+                if (val["name"] === "state") {
+                        if(!stateFlag){
+	                        if (val["value"] === "0") {
+	                           $(function(){
+								   $(".top").addClass(".top");
+							   });
+	                        } else if (val["value"] === "1") {
+	                             $(function(){
+								   $(".top").addClass(".zhishui1");
+							   });
+	                        } else if (val["value"] === "2") {
+	                             $(function(){
+								   $(".top").addClass(".chongxi");
+							   });
+	                        } else if (val["value"] === "3") {
+	                            $(function(){
+								   $(".top").addClass(".jianxiu");
+							   });
+//	                        }else if (val["value"] === "4") {
+//	                            adidas.src="img/guanji.png";
+	                        }
+                        }
+                    }
+            });
+
+        }, function (msg, obj) {
+            // msg - string => error message
+            // obj – object => { resultCode:!0, resultCodeMessage: string }
+            layer.open({content:msg,skin: 'msg',time: 2});
+            layer.open({content:obj.resultCode + obj.resultCodeMessage,skin: 'msg',time: 2});
+        });
+        
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
